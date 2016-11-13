@@ -78,7 +78,6 @@ do local _ = {
     "time",
     "translate",
     "voice",
-    "weather",
     "welecam",
     "whitelist",
     "writer",

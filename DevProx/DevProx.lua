@@ -290,7 +290,6 @@ function create_config( )
     "time",
     "translate",
     "voice",
-    "weather",
     "welecam",
     "whitelist",
     "writer",

@@ -6,7 +6,7 @@
 ▀▄ ▄▀                                      ▀▄ ▄▀   
 ▀▄ ▄▀          (ملف قفل البوتات في المجموعة       ▀▄ ▄▀ 
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
---]]
+—]]
 local function isAntiBotEnabled (chatId)
   local hash = 'bot:lock:'..chatId
   local lock = redis:get(hash)
@@ -55,7 +55,7 @@ local function run (msg, matches)
   end
   if matches[1] == 'فتح البوتات' then
     disableAntiBot(chatId)
-  return 'تـمِ  ✔️ فَتـحَ أضــأفهَ ألــبوَتَِــأت 🔓👍'
+  return 'تـمِ  ✔️ فتـحَ أضــأفهَ ألــبوَتَِــأت 🔓👍'
   end
   if matches[1] == 'chat_add_user' or matches[1] == 'chat_add_user_link' then
     local user = msg.action.user or msg.from

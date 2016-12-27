@@ -8,43 +8,52 @@
 ▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
 --]]
 do
-
 local function pre_process(msg)
-    
-    local hash = 'mate:'..msg.to.id
-    if redis:get(hash) and msg.fwd_from and not is_sudo(msg) and not is_owner(msg) and not is_momod(msg)  then
+
+    local fwd = 'mate:'..msg.to.id
+    if redis:get(fwd) and not is_momod(msg) and msg.fwd_from then
             delete_msg(msg.id, ok_cb, true)
-            return "done"
-        end
+             send_large_msg(get_receiver(msg), '')
+            return "ok"
+end
         return msg
     end
-
-  
-
-
-local function moody(msg, matches)
-    chat_id =  msg.to.id
     
-    if is_momod(msg) and matches[1] == 'قفل اعاده توجيه'  then
-      
-            
-                    local hash = 'mate:'..msg.to.id
-                    redis:set(hash, true)
-                    return ""
-  elseif is_momod(msg) and matches[1] == 'فتح اعاده توجيه' then
-      local hash = 'mate:'..msg.to.id
-      redis:del(hash)
-      return ""
+ local function zeoone(msg, matches)
+     chat_id = msg.to.id
+local reply_id = msg['id']
+     if is_momod(msg) and matches[1]== 'قفل' and matches[2]== 'اعاده توجيه' then
+         local fwd = 'mate:'..msg.to.id
+         redis:set(fwd, true)
+         local text = "تم قفل التوجيه بنجاح🛡☠️"
+         return reply_msg(reply_id, text, ok_cb, false)
+         end
+local reply_id = msg['id']
+    if not is_momod(msg) and matches[1]== 'قفل' and matches[2]== 'اعاده توجيه' then
+    local text = "للمشرفين فقط😎🖕🏿"
+ return reply_msg(reply_id, text, ok_cb, false)
+end
+local reply_id = msg['id']
+if is_momod(msg) and matches[1]== 'فتح' and matches[2]== 'اعاده توجيه' then
+    local fwd = 'mate:'..msg.to.id
+    redis:del(fwd)
+    local text = "تم ✅ الغاء تفعيل وقفل تنبيه اعادة التوجيه 🔷✔️"
+    return reply_msg(reply_id, text, ok_cb, false)
 end
 
-end
+local reply_id = msg['id']
+if not is_momod(msg) and matches[1]== 'فتح' and matches[2]== 'اعاده توجيه' then
+local text = "للمشرفين فقط😎🖕🏿"
+ return reply_msg(reply_id, text, ok_cb, false)
+ end
 
+end
 return {
-    patterns = {
-        '^(قفل اعاده توجيه)$', 
-        '^(فتح اعاده توجيه)$',
+    patterns ={
+        '^(فتح) (اعاده توجيه)$',
+        '^(قفل) (اعاده توجيه)$'
     },
-run = moody,
+run = zeoone,
 pre_process = pre_process 
 }
 end

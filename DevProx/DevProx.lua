@@ -228,7 +228,6 @@ function create_config( )
     "ar-h2",
     "ar-h3",
     "ar-lock-bot",
-    "ar-lock-fwd",
     "ar-map",
     "ar-supergroup",
     "ar-weather",
@@ -296,7 +295,16 @@ function create_config( )
     "car",
     "run",
     "ar-h4",
-    "RDOD"
+    "RDOD",
+    "arr-fwwd",
+    "ar-lock-fwd",
+    "meke.acdar",
+    "meke.addbot",
+    "meke.sorus",
+    "meke.dev",
+    "meke.talem",
+    "meke.welacam",
+    "meke.tadel1"
     },
     sudo_users = { 73928866,250180860,177659243,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},

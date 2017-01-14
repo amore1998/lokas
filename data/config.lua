@@ -1,5 +1,5 @@
 do local _ = {
-  about_text = "Welcome to DevPoint For more information Subscribe to the channel @DevPointTeam",
+  about_text = "Welcome to DevPoint For more information Subscribe to the channel @MEKE_CANALS",
   enabled_plugins = {
    "4",
     "APICLI",

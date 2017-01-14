@@ -1,7 +1,7 @@
 do local _ = {
   about_text = "Welcome to DevPoint For more information Subscribe to the channel @DevPointTeam",
   enabled_plugins = {
-    "4",
+   "4",
     "APICLI",
     "addbot1",
     "admin",
@@ -17,7 +17,6 @@ do local _ = {
     "ar-h2",
     "ar-h3",
     "ar-lock-bot",
-    "ar-lock-fwd",
     "ar-map",
     "ar-supergroup",
     "ar-weather",
@@ -85,7 +84,16 @@ do local _ = {
     "car",
     "run",
     "ar-h4",
-    "RDOD"
+    "RDOD",
+    "arr-fwwd",
+    "ar-lock-fwd",
+    "meke.acdar",
+    "meke.addbot",
+    "meke.sorus",
+    "meke.dev",
+    "meke.talem",
+    "meke.welacam",
+    "meke.tadel1"
   },
   help_text = "",
   help_text_realm = "",
@@ -94,9 +102,12 @@ do local _ = {
     data = "data/moderation.json"
   },
   sudo_users = {
-    73928866,
-    250180860,
-    177659243
+73928866,
+250180860,
+177659243,
+274881831,
+261672819
+313755898,
   }
 }
 return _

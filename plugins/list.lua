@@ -58,9 +58,12 @@ return [[
 〰〰〰〰〰〰〰〰〰〰
 جعلنا لكم البوت اقوى بوت حماية ع الاطلاق
 〰〰〰〰〰〰〰〰〰〰
-🕵المطور @AHMED_ALOBIDE
-🕵المطور @hussian_9
-🕵 المطور @Tiq_ll
+🛃المطور: @AHMED_ALOBIDE
+🛃المطور:@hussian_9
+🛃المطور:@Tiq_ll
+🛃المطور:@project_kali
+🛃المطور:@EsT_IQ_XxX
+🛃المطورة:@NoOoR_DeVA
 ]]
 end
 

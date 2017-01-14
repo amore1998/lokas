@@ -45,7 +45,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-      local text = '😎تم تفعيلي✔️الرجاء قم برفعي🏋مشرف😎️'
+      local text = '👨‍🔧مرحبا👁‍🗨تشرفت بكم الرجاء👨‍🔧 #ارفعني مشرف #قم بقفلي من الاوامر / م ١ الى م ٤ 👁‍🗨🖲 وشكرا سأكون الحماية القصوى للمجموعه🔺'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -69,7 +69,7 @@ local function check_member_superrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-      local text = 'اطلع⛳️واخرب🏃🏻الملعب😂'
+      local text = '👨‍🔧انا اسف جدا مطوري المحترم تم ايقافي 🔴 سأكلم المطور عن قريب وأتي اليكم 🌚♥️'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -185,11 +185,11 @@ local function lock_group_links(msg, data, target)
   end
   local group_link_lock = data[tostring(target)]['settings']['lock_link']
   if group_link_lock == 'yes' then
-    return 'تم قفل الروابط  وها💃وها💃وها خالي😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n"
+    return 'تـــــ👁‍🗨ــم قفل الروابــــــــط بــــــــنجــ🖲ـــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n"
   else
     data[tostring(target)]['settings']['lock_link'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم قفل الروابط  وها💃وها💃وها خالي😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n"
+    return 'الروابــ👁‍🗨ط مقفولة بــــــــالفعـــل ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n"
   end
 end
 
@@ -199,11 +199,11 @@ local function unlock_group_links(msg, data, target)
   end
   local group_link_lock = data[tostring(target)]['settings']['lock_link']
   if group_link_lock == 'no' then
-    return 'تم فتح الروابط  وها💃وها💃وها خالي😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـــ👁‍🗨ـم فتــــــــح الروابــــــــط بــــــــنجــ🖲ـــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_link'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم فتح الروابط  وها💃وها💃وها خالي😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الروابـ👁‍🗨ـط مفتـوحـة بـــالفعــــل ابــــ🖲ــو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -216,11 +216,11 @@ local function lock_group_spam(msg, data, target)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'yes' then
-    return 'تم قفل الكلايش👰🏼اقفل😻خالتك هم😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـــــ👁‍🗨ــم قفل الكلايش بــــــــنجــ🖲ــــــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_spam'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم قفل الكلايش👰🏼اقفل😻خالتك هم😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الكلايش بالفعل مــــقـفولة ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -230,11 +230,11 @@ local function unlock_group_spam(msg, data, target)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'no' then
-    return 'تم فتح الكلايش👰🏼افتح😻خالتك هم😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـــــ👁‍🗨ــم فتح الكلايشــــــــ نجــ🖲ــــــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_spam'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم فتح الكلايش👰🏼افتح😻خالتك هم😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الكـ👁‍🗨لايـش بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -244,11 +244,11 @@ local function lock_group_flood(msg, data, target)
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'yes' then
-    return 'تم قفل🔫التكرار👨🏽وينهم الدواعش😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـــــ👁‍🗨ــم قفل التــــــــكرار بــــــــنجــــ🖲ــــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم قفل🔫التكرار👨🏽وينهم الدواعش😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'التــ👁‍🗨كرار مقفول بــــــــالفعـــل ابــ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -258,11 +258,11 @@ local function unlock_group_flood(msg, data, target)
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'no' then
-    return 'تم فتح🔫التكرار👨🏽وينهم الدواعش😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تــــــ👁‍🗨م فتــــــــح التــــــــكرار بـــنجـ🖲ــــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['flood'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم فتح🔫التكرار👨🏽وينهم الدواعش😂\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'التـــ👁‍🗨ـكرار مفتــــــــوح بـالفعــل ابـــ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -327,11 +327,11 @@ local function lock_group_rtl(msg, data, target)
   end
   local group_rtl_lock = data[tostring(target)]['settings']['lock_rtl']
   if group_rtl_lock == 'yes' then
-    return 'الاضافه الجماعيه بالتاكيد تم ☑️ قفلها 🔐 لمجموعتك\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'تـ👁‍🗨م قفل الاضافة الجماعية بـــنجــــ🖲ـــــاح\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_rtl'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم ☑️ قفل 🔐 الاضافه الجماعيه في مجموعتك\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'الاضـا👁‍🗨ـفة الجماعية بالفعل مقفولة ابـ🖲ـو راس\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   end
 end
 
@@ -341,11 +341,11 @@ local function unlock_group_rtl(msg, data, target)
   end
   local group_rtl_lock = data[tostring(target)]['settings']['lock_rtl']
   if group_rtl_lock == 'no' then
-    return 'الاضافه الجماعيه بالتاكيد تم ☑️ فتحها 🔓 لمجموعتك\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'تـ👁‍🗨م فتح الاضافة الجماعية بـــنجــــ🖲ـــــاح\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_rtl'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم ☑️ فتح 🔓 الاضافه الجماعيه في مجموعتك\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'الاضا👁‍🗨ـفة الجماعية بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   end
 end
 
@@ -355,11 +355,11 @@ local function lock_group_sticker(msg, data, target)
   end
   local group_sticker_lock = data[tostring(target)]['settings']['lock_sticker']
   if group_sticker_lock == 'yes' then
-    return 'قفل الملصقات والله☝🏿️مال الصق😶راسك😂هسة\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـ👁‍🗨م قفل الـــملـــصـقاتـــــــ  بـــنجــــ🖲ــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_sticker'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'قفل الملصقات والله☝🏿️مال الصق😶راسك😂هسة\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الـــملـ👁‍🗨صـقـاتـــ بالــفعــل مقــفولة ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 local function unlock_group_sticker(msg, data, target)
@@ -368,11 +368,11 @@ local function unlock_group_sticker(msg, data, target)
   end
   local group_sticker_lock = data[tostring(target)]['settings']['lock_sticker']
   if group_sticker_lock == 'no' then
-    return 'فتح الملصقات اي افتحها خلي😐الناس تشتم😩هوى\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـ👁‍🗨م فــــتـح الـــملـــصـقاتـــــــ  بـــنجــــ🖲ــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_sticker'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'فتح الملصقات اي افتحها خلي😐الناس تشتم😩هوى\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الــــــملـ👁‍🗨صـقـــاتـــ بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -522,11 +522,11 @@ local function lock_group_fwd(msg, data, target)
   end
   local group_fwd_lock = data[tostring(target)]['settings']['fwd']
   if group_fwd_lock == 'yes' then
-    return 'تم قفل اعاده توجيه اجيناكم🚴🏻بالباسكل الة توجيه😂\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'تـ👁‍🗨ـم قفل اعــــــــاڊہ تـــوجـــيــ🖲ـــہ بـنجـاح\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['fwd'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم قفل اعاده توجيه اجيناكم🚴🏻بالباسكل الة توجيه😂\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'اعــ👁‍🗨ـاده توجــــيه بالفعل مقــفولة ابـ🖲ـو راس\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   end
 end
 
@@ -536,11 +536,11 @@ local function unlock_group_fwd(msg, data, target)
   end
   local group_fwd_lock = data[tostring(target)]['settings']['fwd']
   if group_fwd_lock == 'no' then
-    return 'تم فتح اعاده توجيه اجيناكم🚴🏻بالباسكل الة توجيه😂\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'تـ👁‍🗨ـم فتح اعــــــــاڊہ تـــوجـــيــ🖲ـــہ بـنجـاح\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['fwd'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم فتح اعاده توجيه اجيناكم🚴🏻بالباسكل الة توجيه😂\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+    return 'اعــ👁‍🗨ـاده توجــــيه بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 🎈 ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
   end
 end
 local function lock_group_cmd(msg, data, target)
@@ -605,11 +605,11 @@ local function lock_group_bots(msg, data, target)
   end
   local group_bots_lock = data[tostring(target)]['settings']['lock_bots']
   if group_bots_lock == 'yes' then
-    return 'تم قفل البوتات اخو خيتة🙍🏻الي يفوت🤖بوت هنا😐\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـ👁‍🗨م قفل الـــبوتـــاتـــــــــ   بـــنجــــ🖲ــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_bots'] = 'yes'
     save_data(_config.moderation.data, data)
-    return 'تم قفل البوتات اخو خيتة🙍🏻الي يفوت🤖بوت هنا😐\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الــــــبـوتـــاتـــــ بـالفعل مقـــفـــــولة ابـ🖲ـو راس\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -619,11 +619,11 @@ local function unlock_group_bots(msg, data, target)
   end
   local group_bots_lock = data[tostring(target)]['settings']['lock_bots']
   if group_bots_lock == 'no' then
-    return 'تم فتح البوتات انفتح😒راسك ان شاء الله😶☝🏿️\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'تـ👁‍🗨م فـــتــح الـــبوتـــاتـــــــــ   بـــنجــــ🖲ــاح\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   else
     data[tostring(target)]['settings']['lock_bots'] = 'no'
     save_data(_config.moderation.data, data)
-    return 'تم فتح البوتات انفتح😒راسك ان شاء الله😶☝🏿️\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+    return 'الــــــبـوتـــاتـــــ بـالفعل مفتـوح ابـ🖲ـو راس️\nبواسطه 👀 👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
   end
 end
 
@@ -1366,7 +1366,7 @@ local function run(msg, matches)
                 return
             end
             if is_super_group(msg) then
-                return reply_msg(msg.id, 'المجموعه بالتأكيد ☑️ تم تفعيلها 🎈 ', ok_cb, false)
+                return reply_msg(msg.id, '👨‍🔧المجموعه مفعلة عزيزي المطور🕵️', ok_cb, false)
             end
             print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") added")
             savelog(msg.to.id, name_log.." ["..msg.from.id.."] added SuperGroup")
@@ -1376,7 +1376,7 @@ local function run(msg, matches)
         end
 
         if matches[1] == 'تعطيل' and is_admin1(msg) and not matches[2] then            if not is_super_group(msg) then
-                return reply_msg(msg.id, 'المجموعه بالتأكيد ☑️ تم تعطيلها 🎈 ', ok_cb, false)
+                return reply_msg(msg.id, '👨‍🔧انا اسف جدا تم تعطيلي من قبل مطوري🕵لاتخف سأتي لك عن قريب♥️🌚', ok_cb, false)
             end
             print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") removed")
             superrem(msg)
@@ -2067,9 +2067,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return 'تم قفل الصوت وماريد لاحس🚶ولاصوت🤐ولانفس😶\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـــــ👁‍🗨ــم قفل الصــــــــوت بــــــــنجــ🖲ــــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم قفل الصوت وماريد لاحس🚶ولاصوت🤐ولانفس😶\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الـــصــــــُــوتــــُ بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الصور' then
@@ -2077,9 +2077,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return 'تم قفل الصور اقفلها يقفل💋ايمانك☺️ان شاء الله😶☝🏿️\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م قفل الصـــور بـــنجــــ🖲ــاح️\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم قفل الصور اقفلها يقفل💋ايمانك☺️ان شاء الله😶☝🏿️\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الص👁‍🗨ور بـالفعل مقفولة ابـ🖲ـو راس️\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الفيديو' then
@@ -2087,9 +2087,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                      return 'تم قفل الفيديو في😶خشم المجموعه👃😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                      return 'تـــــ👁‍🗨ـم قفل الفڊيــــــــو بــــــــنجـــ🖲ـــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم قفل الفيديو في😶خشم المجموعه👃😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الـــفـ👁‍🗨ــيــــديـــو بالفعل مقـــفولة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الصور المتحركه' then
@@ -2097,9 +2097,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return 'تم قفل الصور المتحركه يلة😎بلة نشرو🚶خلي اشوف😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م قفل الصـــور المتــحــركہ بـــنجــــ🖲ــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم قفل الصور المتحركه يلة😎بلة نشرو🚶خلي اشوف😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الص👁‍🗨ور المتحركہ بـالفعل مقفولة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الفايلات' then
@@ -2107,9 +2107,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return msg_type..' تم ☑️ قفل 🔐 الفايلات في مجموعتك\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return msg_type..'تـ👁‍🗨م قفل الـــفايلات بـــنجــــ🖲ــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return ""..msg_type..' الفايلات بالتاكيد تم ☑️ قفلها 🔐  لمجموعتك\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return ""..msg_type..'الــــــفايلاتـــــ بـالفعل مقـــفـــــولة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الدردشه' then
@@ -2117,9 +2117,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return 'تم قفل الدردشه اشش🤐سكووت بربس💃بربس😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م قفل الـــدردشـــــة  بـــنجــــــــ🖲ـــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم قفل الدردشه اشش🤐سكووت بربس💃بربس😂\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+                    return 'الــــ👁‍🗨ــدردشــــــة بـالفعل مـــقـفولة ابـ🖲ـو راس\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'المجموعه' then
@@ -2127,9 +2127,9 @@ local function run(msg, matches)
                 if not is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
                     mute(chat_id, msg_type)
-                    return ' تم ☑️ قفل 🔐 المجموعه\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـــــ👁‍🗨ــم قفل المجموعه بــــــــنجــ🖲ــــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return ' تم ☑️ قفل 🔐 المجموعه\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'المجـ👁‍🗨ـموعه بـالفعل مقفـولة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
         end
@@ -2140,9 +2140,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return 'تم فتح الصوت يلا شباب👬احجو دوخونا😂\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+                    return 'تـــــ👁‍🗨ــم فتح الصــــــــوت بــــــــنجــ🖲ــــــاح\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
                 else
-                    return 'تم فتح الصوت يلا شباب👬احجو دوخونا😂\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+                    return 'الـــصــــــُــوتــــُ بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الصور' then
@@ -2150,9 +2150,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return 'تم فتح صور يلا شوفونا👨🏿جهرتكم الحلوة😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م فتــــــــح الصــور بـــ🖲نجـاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم فتح صور يلا شوفونا👨🏿جهرتكم الحلوة😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الص👁‍🗨ور بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الفيديو' then
@@ -2160,9 +2160,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return 'تم فتح الفيديوات شوفونا👀خشومكم الحلوة👃\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـــــ👁‍🗨ـم فتح الفڊيــــــــو بــــــــنجـــ🖲ـــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم فتح الفيديوات شوفونا👀خشومكم الحلوة👃\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الـــفـ👁‍🗨ــيــــديـــو بالفعل مفتوحة ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الصور المتحركه' then
@@ -2170,9 +2170,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return 'تم فتح الصور المتحركه🌅نشرو صور يلا😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م فتــــــــح الصــور المتحـركہ بـــ🖲نجـاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم فتح الصور المتحركه🌅نشرو صور يلا😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الص👁‍🗨ور المتحركہ بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الفايلات' then
@@ -2180,9 +2180,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return ' تم ☑️ فتح 🔓 الفايلات في مجموعتك\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م فتــــــــح الفايلات بـــ🖲نجـاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return ' الفايلات بالتاكيد تم ☑️ فتحها 🔓 لمجموعتك\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الـــــفايلات بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'الدردشه' then
@@ -2190,9 +2190,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute message")
                     unmute(chat_id, msg_type)
-                    return 'تم فتح الدردشه فتحتها🚶لخاطرك والله😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'تـ👁‍🗨م فـــتــح الـــدردشـــــة  بـــنجــــــــ🖲ـــــاح\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 else
-                    return 'تم فتح الدردشه فتحتها🚶لخاطرك والله😂\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
+                    return 'الــــ👁‍🗨ــدردشــــــة بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 👀  👈🏿 @'..msg.from.username..'\n'.."الرساله 👀  👈🏿 "..msg.text.."\n" 
                 end
             end
             if matches[2] == 'المجموعه' then
@@ -2200,9 +2200,9 @@ local function run(msg, matches)
                 if is_muted(chat_id, msg_type..': yes') then
                     savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
                     unmute(chat_id, msg_type)
-                    return ' تم ☑️ فتح 🔓 المجموعه في مجموعتك\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+                    return 'تـــــ👁‍🗨ــم فتح المجموعه بــــــــنجــ🖲ــــــاح\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
                 else
-                    return ' المجموعه بالتاكيد تم ☑️ فتحها 🔓 لمجموعتك\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
+                    return 'المجـ👁‍🗨ـموعه بـالفعل مفتـوح ابـ🖲ـو راس\nبواسطه 🎈  ➖ @'..msg.from.username..'\n'.."الرساله 🎈  ➖ "..msg.text.."\n" 
                 end
             end
         end
@@ -2393,7 +2393,7 @@ return {
     "^[#!/]([Kk]icked)$",
   "^[#!/](بلوك) (.*)",
     "^[#!/](بلوك)",
-    "^[#!/](ترقيه سوبر)$",
+    "^[#!/](ترقيه ��وبر)$",
     "^[#!/](ايدي)$",
     "^[#!/](ايدي) (.*)$",
     "^[#!/](مغادره)$",
@@ -2446,3 +2446,5 @@ return {
   run = run,
   pre_process = pre_process
 }
+
+

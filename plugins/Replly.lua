@@ -581,7 +581,7 @@ function run( msg, matches )
  if ( msg.text == "about" ) then
   if ( msg.from.username == "Mouamle" ) then
    R = get_receiver(msg)
-   send_large_msg ( R , "Made by @Mouamle" );
+   send_large_msg ( R , "Made by @hussian_9" );
   end
  end 
 

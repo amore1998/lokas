@@ -1,7 +1,7 @@
     🌚👇👇ملف منقول من المطور كرار العبيدي
 #لا تضل تكمز وتشمر حجي
-    echo "@liberbot_iraq"
-    echo "@livil"
+    echo "@قيد الانشاء "
+    echo "@lokas_1"
     echo "تمت مسح ملف الملف ال state"
     kill -9 $(pgrep telegram-cli)
     rm -rf ~/.telegram-cli/state

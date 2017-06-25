@@ -34,3 +34,13 @@ echo "➖➖➖➖➖🎗"
 echo '✅Uptime : '"$uptime"
 echo "➖➖➖➖➖🎗"
 echo "🌐 DEV🎗POINT🎗TEAM 🌐"
+
+مطور السورس 👽👇🏿
+
+#dev @lokas_1
+
+المساعدين 👽👇🏿
+
+  #dev : @Abska1999
+
+#dev: @mo_o_iq
